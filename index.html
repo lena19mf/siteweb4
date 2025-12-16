@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Duo – Papa & Moi : Chiens et Chats</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", sans-serif;
+            background: #e6f7ff; /* Bleu très clair */
+            color: #000000; /* Noir (pour une meilleure lisibilité, remplacé de #000000ff) */
+        }
+
+        /* --- HEADER --- */
+        header {
+            /* Garde le rouge pour l'énergie Chiens et Chats */
+            background: linear-gradient(120deg, #ff1e1e, #bc0000); 
+            padding: 50px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.7em;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        /* --- MENU --- */
+        nav {
+            background: #bc0000; /* Rouge foncé */
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            padding: 14px 22px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+
+        nav a:hover {
+            background: #000000; /* Noir, pour un contraste fort */
+        }
+
+        /* --- SECTIONS --- */
+        section {
+            display: none;
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeIn 0.5s;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* --- STYLES SPECIFIQUES --- */
+        .highlight {
+            color: #cc0000; /* Rouge vif pour le contraste */
+            font-weight: bold;
+        }
+        
+        .anecdotes {
+            background: #ffe0e0; /* Fond très léger pour les anecdotes */
+            border-left: 5px solid #cc0000;
+            padding: 15px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #cc0000; /* Rouge */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+            document.getElementById(id).classList.add("active");
+        }
+
+        window.onload = () => showSection("accueil");
+    </script>
+
+</head>
+<body>
+
+<header>
+    <h1>Mon Papa : Mon Adversaire Préféré</h1>
+    <p>Une relation « Chiens et Chats »... mais toujours unis</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('accueil')">Accueil</a>
+    <a href="#" onclick="showSection('clashs')">Nos Classhs</a>
+    <a href="#" onclick="showSection('passions')">Projets & Inspiration</a>
+    <a href="#" onclick="showSection('enquete')">Nos Moments Complices</a>
+</nav>
+
+<section id="accueil" class="active">
+    <h2>Bienvenue sur Notre Terrain de Jeu</h2>
+    <p>
+        Si notre relation était un film, ce serait une comédie d'action avec beaucoup de débats !
+        <br><br>
+        Mon père et moi, c'est comme le jour et la nuit, on est constamment en désaccord, on s'embrouille
+        pour un rien... mais au fond, c'est ça qui fait notre force et notre complicité.
+        <br><br>
+        On est des <span class="highlight">« chiens et chats »</span>, mais on ne s'ennuie jamais !
+    </p>
+</section>
+
+<section id="clashs">
+    <h2>Nos Classhs Quotidiens</h2>
+    <p>
+        Honnêtement, je ne compte plus le nombre de fois où on s'est pris la tête pour une chaussette
+        qui traîne ou un qui veut pas se lever pour un verre d'eau complètement à l'opposée. 
+        <br><br>
+        Le silence entre nous, ça n'existe pas longtemps. Il y a toujours une petite pique,
+        une petite remarque... et ça repart !
+        <br><br>
+        Mais ce qui est drôle, c'est que ça ne dure jamais. Dix minutes après, on rigole ensemble
+        ou on est devant la télé comme si de rien n'était. C'est notre manière à nous de communiquer,
+        pleine d'énergie et de caractère. <span class="highlight">Je préfère ça !</span>
+    </p>
+</section>
+
+<section id="passions">
+    <h2>Mes Projets, Son Inspiration</h2>
+    <p>
+        Malgré nos disputes, c'est lui qui m'inspire le plus, surtout pour mes projets.
+        <br><br>
+        Je peux l'écouter pendant des heures à me raconter ses histoires.
+        <div class="anecdotes">
+            Comme l'histoire de **Monsieur Biscotte**, le mec qui est resté bloqué entre le quai et le TGV,
+            la dame que **Hulk** voyait mais toi papa nan (et pas le mec à la caméra), et plein d'autres.
+        </div>
+        Je sais qu'il est passionné par le <span class="highlight">monde canin et le mordant</span>, et c'est cet intérêt
+        qu'il me transmet qui me donne envie d'avancer dans cette voie. Pour ça que mon but c'est d'avoir une carrière comme lui.
+        <br><br>
+        Quand il me parle de ses connaissances, j'oublie qu'on s'est disputé il y a 5 minutes.
+        Il me pousse toujours à aller au bout de mes idées, même s'il ne le dit pas de manière classique.
+    </p>
+</section>
+
+<section id="enquete">
+    <h2>Nos Moments Complices : Télé et Boxe</h2>
+    <p>
+        Nos moments de paix, ceux où on est vraiment sur la même longueur d'onde, c'est devant la télé :
+        <br><br>
+        * **Enquête d'Action :** C'est notre rituel ! Ces soirées-là, on est côte à côte, concentrés, et on commente l'émission.
+        * **La petite maison dans la prairie :** PS: j'en peux plus de cette série mdr.
+        <br><br>
+        <span class="highlight">Ou à la boxe.</span> Partager ça avec toi, c'est ce qui me rend vraiment heureuse. Le ring, l'entraînement... C'est un langage qu'on partage et une façon saine de canaliser toute cette énergie de "chiens et chats" qui nous habite !
+        <br><br>
+        Notre relation n'est pas lisse, elle est pleine de relief et de passion. Et c'est justement cette intensité qui la rend unique et indestructible.
+    </p>
+</section>
+
+<footer>
+    © 2025 – Notre Duo de Choc : Un Combat Quotidien, Un Amour Éternel
+</footer>
+
+</body>
+</html>
